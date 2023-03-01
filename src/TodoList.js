@@ -25,7 +25,6 @@ const useComponentVisible = (initialIsVisible) => {
 const EditMenu = ({ item, handleChange, handleSubmit }) => {
   return (
     <div className="DeleteMenu">
-      <form onSubmit={handleSubmit}>
         <label>
           <input
             className="TodoListInput"
@@ -42,7 +41,6 @@ const EditMenu = ({ item, handleChange, handleSubmit }) => {
             Edit
           </button>
         </label>
-      </form>
     </div>
   );
 };
@@ -125,6 +123,7 @@ const TodoList = () => {
   };
 
   const handleDelete = (id) => {
+    console.log(id)
     setItems(items.filter((x) => x.id !== id));
   };
 
@@ -135,12 +134,11 @@ const TodoList = () => {
   };
 
   const todoItems = items.map((x) => (
-    <li className="TodoItemText">
+    <li className="TodoItemText" key={x.id}>
       <TodoItem
         item={x.item}
         handleDelete={() => handleDelete(x.id)}
         handleEdit={() => handleEdit(x.id)}
-        key={x.id}
       />
     </li>
   ));
