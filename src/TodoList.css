@@ -1,3 +1,125 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 .Checked {
-    text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.TodoList {
+  width: 310px;
+  padding: 10px;
+  margin: 5px;
+  min-height: 70vh;
+  border: 2px solid #e8d7ff;
+  border-radius: 10px;
+  background-color: #dfffd6;
+}
+
+.TodoItemText {
+  margin: 4px;
+  padding-left: 8px;
+  height: 40px;
+  list-style-type: none;
+  background-color: #e8d7ff;
+  color: #484349;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.SpanText {
+  width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.SpanText:hover {
+  text-decoration: line-through;
+}
+
+.SpanText:active {
+  text-decoration: none;
+}
+
+.TodoListInput {
+  width: 250px;
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #e8d7ff;
+  border-radius: 10px;
+  color: #484349;
+}
+
+.TodoListInput::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: #484349;
+}
+
+.TodoListSubmit,
+.ListButton {
+  width: 50px;
+  padding: 10px;
+  margin: 5px;
+  border: 2px solid #e8d7ff;
+  border-radius: 10px;
+  font-weight: bold;
+  opacity: 0.8;
+  color: #484349;
+}
+
+.TodoListSubmit:hover,
+.ListButton:hover {
+  border: 2px solid #484349;
+}
+
+.TodoListSubmit:active,
+.ListButton:active {
+  opacity: 1;
+}
+
+.ListButton {
+  margin: 0px;
+  margin-left: 25px;
+  padding: 0px;
+  text-align: center;
+  line-height: 40px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.TodoItem {
+  display: inline-block;
+}
+
+.drop-down {
+  list-style: none;
+  position: relative;
+  float: right;
+  z-index: 10;
+}
+
+.drop-down li {
+  font-size: 14px;
+  padding: 8px 0px;
+  border-bottom: 1px solid #cccccc;
+  width: 80px;
+  text-align: center;
+  background: #fbf6f6;
+}
+
+.drop-down li:hover {
+  background: #cccccc;
+}
+
+.DeleteMenu {
+    position: absolute;
+    top: 50%;
+    left: 40%;
 }

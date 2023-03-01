@@ -1,11 +1,11 @@
 .App {
-  text-align: center;
   background-color: #F3FFE1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   font-size: calc(10px + 2vmin);
   color: #484349;
 }
@@ -13,4 +13,8 @@
 .Title {
   font-size: calc(15px + 2vmin);;
   font-weight: bold;
+  font-style: italic;
+  background: -webkit-linear-gradient(#FFD7D5, #484349);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
